@@ -75,7 +75,7 @@ export default function Header({ email, user }: { email: string; user: string })
           <AdminLink />
           {Links.map(({ label, href }, index) => {
             console.log(pathname, href, pathname.includes(href))
-            const isActive = (href.includes(pathname) && href.length > 1) || pathname === href;
+            const isActive = (href.includes(pathname) && pathname.length > 1) || pathname === href;
 
                 if(["Уподобані", "Мої замовлення"].includes(label)) {
                   if (!email) return null;
